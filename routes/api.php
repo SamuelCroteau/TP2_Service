@@ -11,8 +11,8 @@ Route::get('/user', function (Request $request) {
 Route::get('/films', 'App\Http\Controllers\FilmController@index');
 Route::group(['middleware' => 'throttle:5,1'], function () {
     Route::post('/signup', 'App\Http\Controllers\AuthController@register');
-    Route::post('/login', 'App\Http\Controllers\AuthController@login');
-    Route::post('/signout', 'App\Http\Controllers\AuthController@signout');
+    Route::post('/signin', 'App\Http\Controllers\AuthController@login');
+    Route::post('/signout', 'App\Http\Controllers\AuthController@logout');
 });
 
 // test du commit
