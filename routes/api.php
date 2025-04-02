@@ -15,5 +15,7 @@ Route::group(['middleware' => 'throttle:5,1'], function () {
     Route::post('/signout', 'App\Http\Controllers\AuthController@signout');
 });
 
+// test du commit
+
 
 
